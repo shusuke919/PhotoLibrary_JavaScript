@@ -1,0 +1,59 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
+}
+
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, .3);
+}
+
+img{
+  width: 100%;
+  margin: 0;
+  vertical-align: top;
+}
+
+header{
+  background-color: blue;
+  color: #fff;
+  width: 100%;
+  /* スクロールバー固定 */
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+header h1{
+  margin: 0;
+  font-size: 25px;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Coming Soon', cursive;
+font-family: 'Source Sans Pro', sans-serif;
+}
+
+.phot{
+position: relative;
+}
+
+.phot .inner{
+  /* absoluteを使うときは親の要素にrelativeを使う必要がある */
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  margin: 0;
+  color: #fff;
+}
+
+.inner p {
+  padding: 10px;
+}
+.inner span{
+
+  margin-left: 10px;
+
+}

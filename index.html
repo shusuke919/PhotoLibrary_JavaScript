@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>Phot Library</h1>
+  </header>
+  <div class="container">
+    <div id="a">
+      <!-- <div class="phot">
+        <img src="img01.jpg">
+        <div class="inner"><p>これは写真1です<span>ニックネーム</span></p></div> -->
+      </div>
+    </div>
+  </div>
+  <script>
+    // {}JSON形式
+    // []ブラケット記号
+    const images = [
+      {
+        "path" : "img01.jpg",
+        "name" : "name01",
+        "caption" : "コメント1"
+
+      }
+      ,
+      {
+        "path" : "img02.jpg",
+        "name" : "name01",
+        "caption" : "コメント1"
+
+      }
+      ,
+      {
+        "path" : "img03.jpg",
+        "name" : "name01",
+        "caption" : "コメント1"
+
+      }
+    ];
+
+    // alert(images[0].caption)
+
+    //HTMLに表示　innerHTMLを使う方法もある
+    let img;
+    let caption;
+    let div;
+
+    for (let x=0; x<images.length; x++){
+
+
+    
+
+    img = document.createElement('img');
+    img.setAttribute('src', images[x].path);
+   
+
+    caption = document.createElement('div');
+    caption.className = 'inner';
+    caption.innerHTML = '<p>' + images[x].caption + '<span>' + images[x].name + '</span></p>';
+    
+    div = document.createElement('div');
+    div.className = 'phot';
+    div.appendChild(img);
+    div.appendChild(caption);
+
+    document.getElementById('a').appendChild(div);
+
+    }
+  </script>
+</body>
+</html>
